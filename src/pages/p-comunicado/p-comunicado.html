@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Comunicado para todos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-textarea placeholder="Escreva seu comunicado" rows="5" [(ngModel)]="comunicado"></ion-textarea><br>
+  <button ion-button block color="amarelo1" (click)="inserirComunicado()">Adicionar comunicado</button>
+
+  <h5 text-center>Comunicados inseridos</h5>
+
+  <div *ngFor="let comunicados of comunicadosInseridos">
+    <ion-card style="background-color:#eeeded;color:#4e4940"  text-center *ngIf="agenda != ''">
+      <ion-card-content>
+        <h2>{{comunicados.comunicado}}</h2>
+      </ion-card-content>
+      <h3 (click)="excluirComunicado(comunicados.id_comunicado)" style="color:#f89e33">Excluir comunicado</h3><br>
+    </ion-card>
+  </div>
+  
+</ion-content>

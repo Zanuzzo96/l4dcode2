@@ -1,0 +1,21 @@
+page-p-contatos {
+  ion-card{
+    border: 1px solid #f89e33;
+    padding: 20px;
+
+    h3{
+      color:#4e4940;
+      font-size:22px;
+      margin-top: 3px
+    }
+  }
+
+  .btn-diario{
+    color:#f89e33
+  }
+
+  .voltar{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}

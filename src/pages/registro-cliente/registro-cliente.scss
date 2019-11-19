@@ -1,0 +1,41 @@
+page-registro-cliente {
+
+  ion-content {
+    width: 95%
+  }
+
+  h4 {
+    color: #4e4940
+  }
+
+  .btn {
+    width: 95%;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-size:1em;
+  }
+
+  .btn-completar{
+    width: 95%;
+    margin-left: 5%;
+    margin-top: 3%;
+    font-size:1em;
+  }
+
+  h6 {
+    text-align: center;
+    color:#f89e33;
+  }
+
+  input[type=date]{ color: transparent; }
+  input[type=date]:valid{ color: #4e4940; border-color: #4e4940}
+  input[type=date]:focus{ color: #4e4940; border-color: #4e4940}
+
+  .preencher{
+    margin-left: 16px;
+    color:#949494;
+    padding-top:10px
+  }
+
+
+}

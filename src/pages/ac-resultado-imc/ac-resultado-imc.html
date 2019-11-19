@@ -1,0 +1,58 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Resultado imc</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <div class="imc" *ngIf="resultadoImc < 17 ">
+    <img src="../../assets/imgs/rimc2.png" alt="">
+    <h4 text-center >Classificação do IMC</h4>
+    <h1 text-center >Muito abaixo<br>do peso ideal</h1>
+  </div>
+  <div class="imc" *ngIf="resultadoImc >= 17 && resultadoImc < 18.5 ">
+    <img src="../../assets/imgs/rimc2.png" alt="">
+    <h4 text-center >Classificação do IMC</h4>
+    <h1 text-center >Abaixo do<br>peso ideal</h1>
+  </div>
+  <div class="imc" *ngIf="resultadoImc >= 18.5 && resultadoImc < 25">
+    <img src="../../assets/imgs/rimc1.png" alt="">
+    <h4 text-center >Classificação do IMC</h4>
+    <h1 text-center >Peso normal</h1>
+  </div>
+  <div class="imc" *ngIf="resultadoImc >= 25 && resultadoImc < 30">
+    <img src="../../assets/imgs/rimc2.png" alt="">
+    <h4 text-center >Classificação do IMC</h4>
+    <h1 text-center >Acima do Peso</h1>
+  </div>
+  <div class="imc" *ngIf="resultadoImc >= 30 && resultadoImc < 35">
+    <img src="../../assets/imgs/rimc2.png" alt="">
+    <h4 text-center >Classificação do IMC</h4>
+    <h1 text-center >Obesidade<br>grau I</h1>
+  </div>
+  <div class="imc" *ngIf="resultadoImc >= 35 && resultadoImc < 40">
+    <img src="../../assets/imgs/rimc2.png" alt="">
+    <h4 text-center >Classificação do IMC</h4>
+    <h1 text-center >Obesidade<br>grau II</h1>
+  </div>
+  <div class="imc" *ngIf="resultadoImc >= 40 ">
+    <img src="../../assets/imgs/rimc2.png" alt="">
+    <h4 text-center >Classificação do IMC</h4>
+    <h1 text-center >Obesidade<br>grau III</h1>
+  </div>
+
+  <div class="imc">
+    <h4 text-center >Resultado</h4>
+    <h1 text-center>{{resultadoImc}}</h1>
+  </div>
+
+  <img src="../../assets/imgs/tabelaimc.png" class="tabela" alt="">
+
+  <button ion-button block color="amarelo1" (click)="continuar()">Continuar</button>
+
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Adicionar dicas</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <input type="file" class="custom-file-input" value="" (change)="fileChange($event)">
+  <img *ngIf="img1" [src]="img1" class="preview"/>
+  <br>
+  <ion-input type="text" [(ngModel)]="titulo" placeholder="Titulo da dica"></ion-input>
+  <ion-textarea placeholder="Escreva a dica" rows="5" [(ngModel)]="mensagem"></ion-textarea><br>
+  <ion-checkbox [(ngModel)]="emtratamento"></ion-checkbox><span> Dica para usuarios em tratamento </span><br><br>
+  <ion-checkbox [(ngModel)]="semtratamento"></ion-checkbox><span> Dica para usuarios sem tratamento</span><br><br>
+  <ion-checkbox [(ngModel)]="profissional"></ion-checkbox><span> Dica para profissionais</span><br><br>
+  <button ion-button block color="amarelo1" (click)="uploadImg()">Adicionar dica</button>
+</ion-content>

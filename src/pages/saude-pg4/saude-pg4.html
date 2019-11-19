@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Histórico de Saúde</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="funcionamentoIntestinal">
+    <h2>Funcionamento intestinal regular?</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Observações</ion-label>
+      <ion-input type="text" [(ngModel)]="funcionamentoIntestinalObs"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="atividadeFisica">
+    <h2>Pratica atividade física?</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-label stacked>Se sim, quais?</ion-label>
+    <ion-input type="text" [(ngModel)]="atividadeFisicaQuais"></ion-input>
+  </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="fumante">
+    <h2>É fumante?</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="alimentacao">
+    <h2>Alimentação balanceada?</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Tipo?</ion-label>
+      <ion-input type="text" [(ngModel)]="alimentacaoTipo"></ion-input>
+    </ion-item><br>
+
+  <button ion-button block color="amarelo1" class="botao" (click)="continuar()">Continuar</button>
+</ion-content>

@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-toolbar color="cinza1">
+    <ion-title text-center>Olá {{nome}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card style="background-color:#eeeded;color:#4e4940" text-center *ngIf="comunicados">
+    <div *ngFor = "let comunicado of comunicados">
+      <ion-card-header>
+        Mensagem do profissional
+      </ion-card-header>
+      <ion-card-content>
+        <h3>{{comunicado.comunicado}}</h3>
+      </ion-card-content>
+    </div>
+  </ion-card>
+
+
+  <ion-card style="background-color:#ed6160" text-center *ngIf="agendamento == false">
+    <ion-card-content>
+      <h2 style="color:#fff"><strong>Você não tem nenhuma sessão agendada</strong></h2>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="amarelo1" text-center *ngIf="agendamento == true">
+    <ion-card-header>
+      Sua próxima sessão
+    </ion-card-header>
+    <ion-card-content>
+      <h1><strong>{{agenda.data}} - {{agenda.hora}}</strong></h1>
+      <span>Tratamento {{agenda.tratamento}}</span>
+    </ion-card-content>
+  </ion-card>
+
+<ion-list *ngIf="tratamentos == true">
+  <ion-item text-center>
+    <span class="titulotratamento">Tratamentos</span>
+  </ion-item>
+
+<div *ngFor = "let tratamento of tratamento">
+  <ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col text-center>
+          <h2>Tratamento: {{tratamento.tratamento}}</h2>
+        </ion-col>
+      </ion-row>
+      <ion-row text-center>
+        <ion-col>
+          <h6>Meta</h6>
+          <h5>{{tratamento.meta}}</h5>
+        </ion-col>
+        <ion-col>
+          <h6>Sessões</h6>
+          <h5>{{tratamento.sessoes}} / {{tratamento.contsessoes}}</h5>
+        </ion-col>
+        <ion-col>
+          <h6>Peso</h6>
+          <h5>{{tratamento.peso}}</h5>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col text-center>
+          <h4 (click)="evolucao(tratamento.id_tratamento)">Acompanhar evolução</h4>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</div>
+
+</ion-list>
+
+<ion-card style="background-color:#ed6160" text-center *ngIf="tratamentos == false">
+  <ion-card-content>
+    <h2 style="color:#fff"><strong>Você não tem nenhum tratamento iniciado</strong></h2>
+  </ion-card-content>
+</ion-card>
+
+
+
+</ion-content>
+
+<ion-footer text-center>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-3 (click)="diario()">
+        <ion-icon name="ios-bookmarks-outline"></ion-icon>
+        <h6>Diário</h6>
+      </ion-col>
+      <ion-col col-3 (click)="perfil()">
+        <ion-icon name="ios-person-outline"></ion-icon>
+        <h6>Perfil</h6>
+      </ion-col>
+      <ion-col col-3 (click)="dicas()">
+        <ion-icon name="ios-thumbs-up-outline"></ion-icon>
+        <h6>Dicas</h6>
+      </ion-col>
+      <ion-col col-3 (click)="sair()">
+        <ion-icon name="ios-log-out-outline"></ion-icon>
+        <h6>Sair</h6>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</ion-footer>

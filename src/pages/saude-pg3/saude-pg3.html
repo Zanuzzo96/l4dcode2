@@ -1,0 +1,48 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Histórico de Saúde</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list radio-group [(ngModel)]="antecendentesCirurgicos">
+    <h2>Antecedentes cirúrgicos</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Se sim, quais?</ion-label>
+      <ion-input type="text" [(ngModel)]="antecendentesCirurgicosQuais"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="tratamentoAnterior">
+    <h2>Tratamento estético anterior</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Se sim, qual?</ion-label>
+      <ion-input type="text" [(ngModel)]="tratamentoAnteriorQuais"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="antecedenterAlergicos">
+    <h2>Antecedentes Alérgicos</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Se sim, quais?</ion-label>
+      <ion-input type="text" [(ngModel)]="antecedenterAlergicosQuais"></ion-input>
+    </ion-item><br>
+
+
+  <button ion-button block color="amarelo1" class="botao" (click)="continuar()">Continuar</button>
+</ion-content>

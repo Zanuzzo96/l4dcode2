@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="cinza1">
+    <ion-title text-center>Olá {{nomeProfissional}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h6 text-center *ngIf="dia">Sua proxima sessão</h6>
+
+  <ion-card *ngFor="let item of dia">
+    <ion-card-header text-center style="color:#ffffff;font-weight:bold;font-size:16px">
+      {{item.data}} - {{item.hora}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <h1><strong>{{item.nome}}</strong></h1>
+            <h3><strong>Telefone:</strong> {{item.telefone}}</h3>
+            <h3><strong>Tratamento:</strong> {{item.tratamento}}</h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+  </ion-card>
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-6>
+        <div class="botao" (click)="agenda()">
+          <ion-icon name="ios-bookmarks-outline"></ion-icon><br>
+          <span>Agenda<br>completa</span>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="botao" (click)="diario()">
+          <ion-icon name="ios-book-outline"></ion-icon><br>
+          <span>Diario da vida<br>saudavel</span>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="botao" (click)="clientes()">
+          <ion-icon name="ios-people-outline"></ion-icon><br>
+          <span>Seus<br>Clientes</span>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="botao" (click)="perfil()">
+          <ion-icon name="ios-person-outline"></ion-icon><br>
+          <span>Perfil<br>Profissional</span>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="botao" (click)="contato()">
+          <ion-icon name="ios-call-outline"></ion-icon><br>
+          <span>Retornar<br>contato</span>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="botao" (click)="comunicado()">
+          <ion-icon name="ios-mail-outline"></ion-icon><br>
+          <span>Enviar comunicado<br>para os clientes</span>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="botao" (click)="sugestoes()">
+          <ion-icon name="ios-warning-outline"></ion-icon><br>
+          <span>Sugestões e<br>informações</span>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="botao" (click)="sair()">
+          <ion-icon name="ios-log-out-outline"></ion-icon><br>
+          <span><br>Sair</span>
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

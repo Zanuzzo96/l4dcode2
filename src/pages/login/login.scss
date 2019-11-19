@@ -1,0 +1,30 @@
+page-login {
+
+  .item {
+    border-color: rgba(0, 0, 0, 0);
+	  background-color: rgba(0, 0, 0, 0);
+  }
+
+  ion-content {
+    width: 95%
+  }
+
+  .btn {
+    font-size:1.2em;
+    margin-top:3%;
+    width: 95%;
+    float: right;
+  }
+
+  .box-recuperacao {
+    width: 100%;
+    display:inline-block;
+    margin-top:5%;
+  }
+
+  h3 {
+    width:100%;
+    font-size: 14px;
+  }
+
+}

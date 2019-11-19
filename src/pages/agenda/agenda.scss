@@ -1,0 +1,29 @@
+page-agenda {
+  ion-content{
+    width:95%
+  }
+  .botaoAgendar{
+    font-size:16px;
+    width:95%;
+    margin-left: 5%
+  }
+  .agendamentos{
+    background: #f89e33;
+    height:25px;
+    line-height:25px;
+    color:#ffffff;
+    margin-left:15px;
+    margin-bottom: 5px;
+    border-radius: 5px
+  }
+
+  .danger{
+    background: #ed6160;
+    color:#ffffff;
+    height:45px;
+    line-height:45px;
+    margin-left:15px;
+    margin-bottom: 5px;
+    border-radius: 5px
+  }
+}

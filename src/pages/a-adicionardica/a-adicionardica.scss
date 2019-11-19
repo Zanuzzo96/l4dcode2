@@ -1,0 +1,47 @@
+page-a-adicionardica {
+
+  .custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+    display: none;
+  }
+  .custom-file-input::before {
+    content: 'Escolhe imagem';
+    display: inline-block;
+    background: #f89e33 ;
+    padding:10px;
+    padding-left: 55px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    height:20px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+  ion-input{
+    border-bottom:1px solid #f89e33;
+    margin-bottom: 10px
+  }
+
+  ion-textarea{
+    border:1px solid #f89e33
+  }
+
+  span {
+    font-size:14px
+  }
+
+  .preview {
+    width:100%;
+    height:auto;
+  }
+}

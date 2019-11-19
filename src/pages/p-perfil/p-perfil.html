@@ -1,0 +1,112 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+  <ion-segment [(ngModel)]="cadastro">
+    <ion-segment-button value="perfil">
+      Perfil
+    </ion-segment-button>
+
+     <ion-segment-button value="endereco">
+       Endereço
+     </ion-segment-button>
+
+   </ion-segment>
+
+</ion-header>
+
+
+
+<ion-content class="fundo" [ngSwitch]="cadastro">
+
+  <div *ngSwitchCase = "'perfil'" ngSelected="selected">
+
+    <div class="dados">
+      <ion-list>
+
+        <ion-item>
+          <ion-label floating>Nome Completo</ion-label>
+            <ion-input type="text" value="{{perfilProf.nome}}" [(ngModel)]="perfilProf.nome"></ion-input>
+          </ion-item>
+        <ion-item>
+          <ion-label floating>CPF</ion-label>
+            <ion-input type="number" value="{{perfilProf.cpf}}" [(ngModel)]="perfilProf.cpf"></ion-input>
+          </ion-item>
+        <ion-item>
+          <ion-label floating>Data de nascimento</ion-label>
+            <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="perfilProf.nasc" ></ion-datetime>
+          </ion-item>
+        <ion-item>
+          <ion-label floating>Sexo</ion-label>
+            <ion-input type="text" value="{{perfilProf.sexo}}" [(ngModel)]="perfilProf.sexo"></ion-input>
+          </ion-item>
+        <ion-item>
+          <ion-label floating>Telefone</ion-label>
+            <ion-input type="number" value="{{perfilProf.telefone}}" [(ngModel)]="perfilProf.telefone"></ion-input>
+          </ion-item>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+            <ion-input type="text" value="{{perfilProf.email}}" [(ngModel)]="perfilProf.email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Estabelecimento</ion-label>
+            <ion-input type="text" value="{{perfilProf.estabelecimento}}" [(ngModel)]="perfilProf.estabelecimento"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Formação</ion-label>
+            <ion-select [(ngModel)]="perfilProf.formacao">
+              <ion-option value="Esteticista Graduado(a)">Esteticista Graduado(a)</ion-option>
+              <ion-option value="Esteticista Técnico">Esteticista Técnico</ion-option>
+              <ion-option value="Dermato Funcional">Dermato Funcional</ion-option>
+              <ion-option value="Biomédico Esteta">Biomédico Esteta</ion-option>
+              <ion-option value="Farmacêutico Esteta">Farmacêutico Esteta</ion-option>
+              <ion-option value="Outros">Outros</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+        </ion-item>
+        </ion-list>
+    </div>
+  </div>
+
+  <div *ngSwitchCase = "'endereco'">
+    <div class="dados">
+
+      <ion-list>
+        <ion-item>
+          <ion-label floating>CEP</ion-label>
+          <ion-input type="number" value="{{perfilProf.cep}}" [(ngModel)]="perfilProf.cep"></ion-input>
+        </ion-item>
+        <ion-item style="border: 0px">
+            <span class="btnAtualizarCep" (click)="atualizarCep()">Atualizar endereço pelo cep</span>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Rua, Numero e Bairro</ion-label>
+          <ion-input type="text" value="{{perfilProf.rua}}" [(ngModel)]="perfilProf.rua"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>Cidade</ion-label>
+            <ion-input type="text" value="{{perfilProf.cidade}}" [(ngModel)]="perfilProf.cidade"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>Estado</ion-label>
+            <ion-input type="text" value="{{perfilProf.estado}}" [(ngModel)]="perfilProf.estado"></ion-input>
+        </ion-item>
+
+        <ion-item>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button block color="amarelo1" (click)="atualizar()">Atualizar perfil</button>
+</ion-footer>

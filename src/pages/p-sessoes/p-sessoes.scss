@@ -1,0 +1,40 @@
+page-p-sessoes {
+  .btn {
+    width: 94%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:35px;
+    line-height: 35px;
+    text-align: left;
+    background-color: #4e4940;
+    color:#fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: 7px
+  }
+
+  ion-icon {
+    margin-top: 7px
+  }
+
+  .orientacao,.peso {
+    background-color: #f4f3f3;
+    padding:1px
+  }
+
+  .receita {
+    width: 94%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+      span {
+        color:#4e4940
+      }
+  }
+
+  .graficos{
+    width: 100%
+  }
+
+}

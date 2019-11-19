@@ -1,0 +1,45 @@
+<!--
+  Generated template for the AcFlacidezPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Flacidez</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list radio-group [(ngModel)]="flacidez.tissular">
+    <h2>Flacidez Tissular</h2>
+    <ion-item><ion-label>Tissular leve</ion-label><ion-radio value="Tissular leve"></ion-radio></ion-item>
+    <ion-item><ion-label>Tissular moderado</ion-label><ion-radio value="Tissular moderado"></ion-radio></ion-item>
+    <ion-item><ion-label>Tissular intenso</ion-label><ion-radio value="Tissular intenso"></ion-radio></ion-item>
+    <ion-item><ion-label>Tissular grave</ion-label><ion-radio value="Tissular grave"></ion-radio></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <h2>Localização da flacidez tissular</h2>
+    <ion-item><ion-input type="text" text-center [(ngModel)]="flacidez.tissularlocalidade"></ion-input></ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="flacidez.muscular">
+    <h2>Flacidez Muscular</h2>
+    <ion-item><ion-label>Muscular leve</ion-label><ion-radio value="Muscular leve"></ion-radio></ion-item>
+    <ion-item><ion-label>Muscular moderado</ion-label><ion-radio value="Muscular moderado"></ion-radio></ion-item>
+    <ion-item><ion-label>Muscular intenso</ion-label><ion-radio value="Muscular intenso"></ion-radio></ion-item>
+    <ion-item><ion-label>Muscular grave</ion-label><ion-radio value="Muscular grave"></ion-radio></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <h2>Localização da flacidez muscular</h2>
+    <ion-item><ion-input type="text" text-center [(ngModel)]="flacidez.muscularlocalidade"></ion-input></ion-item>
+  </ion-list>
+
+  <button ion-button block color="amarelo1" (click)="continuar()">Continuar</button>
+</ion-content>

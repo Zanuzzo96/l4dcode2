@@ -1,0 +1,49 @@
+<!--
+  Generated template for the ADicasPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar color="cinza1">
+    <ion-buttons left (click)="voltar()" class="voltar">
+      <button ion-button icon-only>
+        <ion-icon ios="ios-arrow-round-back" md="md-arrow-round-back"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Dicas</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button block color="amarelo1" (click)="adicionar()">Adicionar dica</button>
+
+  <h6 text-center>Ultimas dicas postadas</h6>
+
+  <ion-card color="amarelo1" *ngFor="let item of dicas">
+    <img src="{{item.img_dica}}"/>
+    <ion-card-content>
+      <ion-card-title>
+        {{item.titulo}}
+        </ion-card-title>
+      <h3>
+        {{item.descricao}}
+      </h3><br>
+
+      <h6 *ngIf="item.permissao == 1">Permissão: Usuários sem tratamento</h6>
+      <h6 *ngIf="item.permissao == 2">Permissão: Usuários em tratamento</h6>
+      <h6 *ngIf="item.permissao == 3">Permissão: Todos usuários</h6>
+
+      <br>
+
+      <button ion-button color="cinza1" block (click)="excluir(item.id_dica)">Excluir dica</button>
+
+    </ion-card-content>
+  </ion-card>
+
+
+
+</ion-content>

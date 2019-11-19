@@ -1,0 +1,30 @@
+page-ac-inicio {
+
+  .fundo{
+    background-color: #f4f3f3
+  }
+
+  h1{
+      font-size: 2.3em;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      color:#4e4940;
+      background-color: #f4f3f3
+  }
+
+  img {
+    height: 70%;
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    //background-color: #fff
+  }
+
+  .btn-voltar {
+    border: none !important;
+    color: #4e4940;
+    margin-top:15px
+  }
+
+}

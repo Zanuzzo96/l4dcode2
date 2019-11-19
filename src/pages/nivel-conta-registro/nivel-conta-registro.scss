@@ -1,0 +1,24 @@
+page-nivel-conta-registro {
+  .fundo {
+    background: #4e4940;
+  }
+
+  h2 {
+    color:#fff
+  }
+
+  .btn {
+    width: 75%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size:1.2em;
+  }
+
+  .toolbar.no-border, .navbar.no-border{
+    .toolbar-background{
+    border:0;
+    }
+  }
+
+}

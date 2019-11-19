@@ -1,0 +1,18 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Imagens das sessões</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card color="amarelo1" *ngFor="let imagens of imagenssessao">
+    <img src="{{imagens.imagem}}"/>
+    <div class="data">
+      <h1>{{imagens.data}}</h1>
+    </div>
+  </ion-card>
+</ion-content>

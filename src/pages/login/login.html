@@ -1,0 +1,36 @@
+<ion-header no-border>
+
+  <ion-navbar no-border color="cinza1">
+      <ion-title>Acesse sua conta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding no-border>
+
+  <ion-list>
+    <ion-item class="item">
+      <ion-label stacked>Login</ion-label>
+      <ion-input type="text" [(ngModel)]="login"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Senha</ion-label>
+      <ion-input type="password" [(ngModel)]="senha"></ion-input>
+    </ion-item>
+
+    <ion-item no-lines>
+      <ion-label color="cinza1">Permanecer logado</ion-label>
+      <ion-toggle [(ngModel)]="permanecerLogado" color="amarelo1"></ion-toggle>
+    </ion-item>
+
+    <button ion-button block color="amarelo1" class="btn" (click)="logar()">Acessar</button>
+
+    <div class="box-recuperacao">
+      <h3 text-center (click)="RecuperarSenha()"> Esqueceu  sua senha? Clique aqui</h3>
+    </div>
+
+  </ion-list>
+
+</ion-content>

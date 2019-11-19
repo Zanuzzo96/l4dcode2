@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Alterações Posturais</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list radio-group [(ngModel)]="posturais.ombros">
+    <h2>Ombros</h2>
+    <ion-item><ion-label>Anteriorização</ion-label><ion-radio value="Anteriorização"></ion-radio></ion-item>
+    <ion-item><ion-label>Hiperextensão</ion-label><ion-radio value="Hiperextensão"></ion-radio></ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="posturais.coluna">
+    <h2>Coluna</h2>
+    <ion-item><ion-label>Escoliose em C</ion-label><ion-radio value="Escoliose em C"></ion-radio></ion-item>
+    <ion-item><ion-label>Escoliose em S</ion-label><ion-radio value="Escoliose em S"></ion-radio></ion-item>
+    <ion-item><ion-label>Hipercifose</ion-label><ion-radio value="Hipercifose"></ion-radio></ion-item>
+    <ion-item><ion-label>Hiperlordose</ion-label><ion-radio value="Hiperlordose"></ion-radio></ion-item>
+    <ion-item><ion-label>Retificação da cifose</ion-label><ion-radio value="Retificação da cifose"></ion-radio></ion-item>
+    <ion-item><ion-label>Retificação da lordose</ion-label><ion-radio value="Retificação da lordose"></ion-radio></ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="posturais.quadril">
+    <h2>Quadril</h2>
+    <ion-item><ion-label>Antiversão</ion-label><ion-radio value="Antiversão"></ion-radio></ion-item>
+    <ion-item><ion-label>Retroversão</ion-label><ion-radio value="Retroversão"></ion-radio></ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="posturais.joelhos">
+    <h2>Joelho</h2>
+    <ion-item><ion-label>Genovalgo</ion-label><ion-radio value="Genovalgo"></ion-radio></ion-item>
+    <ion-item><ion-label>Genovaro</ion-label><ion-radio value="Genovaro"></ion-radio></ion-item>
+    <ion-item><ion-label>Hiperextensão</ion-label><ion-radio value="Hiperextensão"></ion-radio></ion-item>
+  </ion-list>
+
+  <button ion-button block color="amarelo1" (click)="continuar()">Continuar</button>
+</ion-content>

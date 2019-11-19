@@ -1,0 +1,31 @@
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Agenda completa</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of retornoAgenda">
+    <ion-card-header text-center style="color:#ffffff;font-weight:bold;font-size:16px">
+      {{item.data}} - {{item.hora}}
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <h1><strong>{{item.nome}}</strong></h1>
+            <h3><strong>Telefone:</strong> {{item.telefone}}</h3>
+            <h3><strong>Tratamento:</strong> {{item.tratamento}}</h3>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button ion-button block icon-start color="amarelo1" class="opcao" (click)="sessoes(item.id_cadastro,item.sexo,item.id_tratamento,item.data,item.hora)">
+        <ion-icon name="ios-clipboard-outline"></ion-icon>
+        Sessão
+      </button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

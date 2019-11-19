@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Histórico de Saúde</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="menstrual">
+    <h2>Ciclo menstrual regular</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+  <ion-list>
+    <h2>Se for regular</h2>
+    <ion-item>
+      <ion-label stacked>Qual dia do mês inicia</ion-label>
+      <ion-input type="text" [(ngModel)]="menstrualInicio"></ion-input>
+    </ion-item><br>
+    <ion-item>
+      <ion-label stacked>Qual dia do mês termina</ion-label>
+      <ion-input type="text" [(ngModel)]="menstrualFim"></ion-input>
+    </ion-item><br>
+  </ion-list>
+  <ion-list radio-group [(ngModel)]="anticoncepcional">
+    <h2>Usa método anticoncepcional</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Qual?</ion-label>
+      <ion-input type="text" [(ngModel)]="anticoncepcionalQual"></ion-input>
+    </ion-item><br>
+
+    <button ion-button block color="amarelo1" class="botao" (click)="continuar()">Continuar</button><br>
+
+</ion-content>

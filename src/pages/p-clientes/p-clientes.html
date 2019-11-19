@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Clientes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card class="clientes" *ngFor="let item2 of clientes">
+      <ion-card-content>
+        <h1><strong>{{item2.nome}}</strong></h1>
+        <h2><strong>Telefone:</strong> {{item2.telefone}}</h2>
+        <h2><strong>Email:</strong> {{item2.email}}</h2><br>
+        <button ion-button block color="amarelo1" (click)="sessoes(item2.id_cadastro,item2.sexo)">Fazer avaliação</button>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

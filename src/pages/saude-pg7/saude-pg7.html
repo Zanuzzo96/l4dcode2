@@ -1,0 +1,58 @@
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Histórico de Saúde</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list radio-group [(ngModel)]="algumproblemaortopedico">
+    <h2>Tem algum problema ortopédico</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Qual?</ion-label>
+      <ion-input type="text" [(ngModel)]="qualproblemaortopedico"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="tratamentoMedico">
+    <h2>Faz algum tratamento médico</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Qual?</ion-label>
+      <ion-input type="text" [(ngModel)]="tratamentoMedicoQual"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="acidoPelo">
+    <h2>Usa ou já usou ácidos na pele</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Quais?</ion-label>
+      <ion-input type="text" [(ngModel)]="acidoPeloQuais"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="ortomelecular">
+    <h2>Já fez algum tratamento ortomelecular</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Qual?</ion-label>
+      <ion-input type="text" [(ngModel)]="ortomelecularQual"></ion-input>
+    </ion-item><br>
+
+  <button ion-button block color="amarelo1" class="botao" (click)="continuar()">Continuar</button>
+
+</ion-content>

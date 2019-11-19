@@ -1,0 +1,18 @@
+page-recuperacao-senha {
+
+  ion-content {
+    width: 95%
+  }
+
+  .btn {
+    font-size:1.2em;
+    margin-top:3%;
+    width:95%;
+    float: right;
+  }
+
+  input[type=date]{ color: transparent; }
+  input[type=date]:valid{ color: #4e4940; border-color: #4e4940}
+  input[type=date]:focus{ color: #4e4940; border-color: #4e4940}
+
+}

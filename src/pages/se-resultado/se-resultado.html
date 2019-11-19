@@ -1,0 +1,30 @@
+<ion-content padding class="fundo">
+  <h2 text-center style="color:#4e4940;margin-top:70px;margin-bottom:30px">Resultado do teste</h2>
+
+  <div class="" *ngIf="resultadoFinal <= 25 ">
+    <img src="../../assets/imgs/sedentario.png" alt="">
+    <h4 text-center >Classificação</h4>
+    <h1 text-center >Sedentário</h1>
+  </div>
+
+  <div class="" *ngIf="resultadoFinal > 25 && resultadoFinal <= 50">
+    <img src="../../assets/imgs/poucoativo.png" alt="">
+    <h4 text-center >Classificação</h4>
+    <h1 text-center >Pouco ativo</h1>
+  </div>
+
+  <div class="" *ngIf="resultadoFinal > 50 && resultadoFinal <= 75">
+    <img src="../../assets/imgs/ativo.png" alt="">
+    <h4 text-center >Classificação</h4>
+    <h1 text-center >Ativo</h1>
+  </div>
+
+  <div class="" *ngIf="resultadoFinal > 75 && resultadoFinal <= 100">
+    <img src="../../assets/imgs/muitoativo.png" alt="">
+    <h4 text-center >Classificação</h4>
+    <h1 text-center >Muito Ativo</h1>
+  </div>
+
+  <button ion-button color="amarelo1" style="margin-top:20px; width:65%; display:block; margin-left:auto; margin-right:auto" (click)="concluir()">Concluir</button>
+
+</ion-content>

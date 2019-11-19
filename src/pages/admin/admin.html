@@ -1,0 +1,51 @@
+<ion-header>
+
+  <ion-toolbar color="cinza1" text-center>
+    <ion-title>Olá Everton</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-grid>
+    <ion-row>
+
+      <ion-col col-6>
+        <div class="botao" (click)="profissionais()">
+          <ion-icon name="ios-people-outline"></ion-icon><br>
+          <span>Profissionais</span>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="botao" (click)="dicas()">
+          <ion-icon name="ios-create-outline"></ion-icon><br>
+          <span>Dicas</span>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="botao" (click)="relatorios()">
+          <ion-icon name="ios-stats-outline"></ion-icon><br>
+          <span>Relatorios</span>
+        </div>
+      </ion-col>
+
+      <ion-col col-6>
+        <div class="botao" (click)="sorteios()">
+          <ion-icon name="ios-ribbon-outline"></ion-icon><br>
+          <span>Sorteios</span>
+        </div>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+
+  <button ion-button full icon-only no-border no-lines outline class="btn-deslogar" (click)="sair()">
+    <ion-icon name="ios-log-out-outline"></ion-icon>
+    Sair
+  </button>
+
+</ion-content>

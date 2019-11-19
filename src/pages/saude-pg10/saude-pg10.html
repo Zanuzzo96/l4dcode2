@@ -1,0 +1,46 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Histórico de Saúde</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="varizes">
+    <h2>Varizes</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Grau</ion-label>
+      <ion-input type="text" [(ngModel)]="varizesGrau"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="lesoes">
+    <h2>Lesões</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Quais</ion-label>
+      <ion-input type="text" [(ngModel)]="lesoesQuais"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="hipertensao">
+    <h2>Hipertensão</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+  <ion-list radio-group [(ngModel)]="hipotensao">
+    <h2>Hipotensão</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+  <button ion-button block color="amarelo1" class="botao" (click)="continuar()">Continuar</button>
+</ion-content>

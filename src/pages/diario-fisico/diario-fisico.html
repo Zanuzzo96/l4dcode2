@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Diário da vida saudável</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2 text-center style="color:#4e4940">Realizou alguma atividade física hoje por mais de 20 minutos?</h2>
+  <ion-list radio-group [(ngModel)]="fisico">
+    <ion-item><ion-label>Caminhada</ion-label><ion-radio value="Caminhada"></ion-radio></ion-item>
+    <ion-item><ion-label>Ginástica </ion-label><ion-radio value="Ginástica "></ion-radio></ion-item>
+    <ion-item><ion-label>Musculação</ion-label><ion-radio value="Musculação"></ion-radio></ion-item>
+    <ion-item><ion-label>Dança</ion-label><ion-radio value="Dança"></ion-radio></ion-item>
+    <ion-item><ion-label>Bicicleta</ion-label><ion-radio value="Bicicleta"></ion-radio></ion-item>
+    <ion-item><ion-label>Natação</ion-label><ion-radio value="Natação"></ion-radio></ion-item>
+    <ion-item><ion-label>Esportes marciais</ion-label><ion-radio value="Esportes marciais"></ion-radio></ion-item>
+    <ion-item><ion-label>Outros</ion-label><ion-radio value="Outros"></ion-radio></ion-item>
+    <ion-item><ion-label>Nenhuma atividade</ion-label><ion-radio value="Nenhuma atividade"></ion-radio></ion-item>
+  </ion-list>
+  <button ion-button block color="amarelo1" (click)="proximo()">Proximo</button>
+</ion-content>

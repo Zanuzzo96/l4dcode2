@@ -1,0 +1,20 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Diário da vida saudável</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2 text-center style="color:#4e4940">Qualidade do sono<br>esta semana?</h2>
+  <ion-list radio-group [(ngModel)]="sono">
+    <ion-item><ion-label>Péssimo - 4 horas</ion-label><ion-radio value="Pessimo"></ion-radio></ion-item>
+    <ion-item><ion-label>Médio - 5 á 6 horas</ion-label><ion-radio value="Medio"></ion-radio></ion-item>
+    <ion-item><ion-label>Bom - 7 horas</ion-label><ion-radio value="Bom"></ion-radio></ion-item>
+    <ion-item><ion-label>Excelente - 8 horas</ion-label><ion-radio value="Excelente"></ion-radio></ion-item>
+  </ion-list>
+  <button ion-button block color="amarelo1" (click)="proximo()">Proximo</button>
+</ion-content>

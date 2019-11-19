@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Quadril</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img *ngIf=" sexo == 'm' " src="../../assets/imgs/H5.png"/>
+  <img *ngIf=" sexo == 'f' " src="../../assets/imgs/M5.png"/>
+
+  <ion-list>
+    <h2>Medida do quadril</h2>
+    <ion-item><ion-input type="text" text-center [(ngModel)]="quadril.quadril"></ion-input></ion-item>
+  </ion-list>
+
+  <button ion-button block color="amarelo1" (click)="continuar()">Continuar</button>
+</ion-content>

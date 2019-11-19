@@ -1,0 +1,25 @@
+<!--
+  Generated template for the SeEsportePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Teste de sedentarismo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2 text-center style="color:#4e4940">Você pratica esporte (futebol, vôlei, basquete, etc.) ou algum exercício físco (musculação, corrida, natação, etc.) na semana?</h2>
+  <ion-list radio-group [(ngModel)]="esporte">
+    <ion-item><ion-label>Sim, mais de cinco vezes por semana</ion-label><ion-radio value="10"></ion-radio></ion-item>
+    <ion-item><ion-label>Sim, entre duas e quatro vezes<br>por semana </ion-label><ion-radio value="7.5"></ion-radio></ion-item>
+    <ion-item><ion-label>Sim, entre uma e duas vezes<br>por semana</ion-label><ion-radio value="5"></ion-radio></ion-item>
+    <ion-item><ion-label>Não pratico exercícios ou esportes</ion-label><ion-radio value="2,5"></ion-radio></ion-item>
+  </ion-list>
+  <button ion-button block color="amarelo1" (click)="continuar()">Proximo</button>
+</ion-content>

@@ -1,0 +1,19 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Cintura</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <img *ngIf=" sexo == 'm' " src="../../assets/imgs/H4.png"/>
+  <img *ngIf=" sexo == 'f' " src="../../assets/imgs/M4.png"/>
+  <ion-list>
+    <h2>Medida da cintura</h2>
+    <ion-item><ion-input type="text" text-center [(ngModel)]="cintura.cintura"></ion-input></ion-item>
+  </ion-list>
+  <button ion-button block color="amarelo1" (click)="continuar()">Continuar</button>
+</ion-content>

@@ -1,0 +1,32 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Histórico de Saúde</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="gestante">
+    <h2>É gestante?</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+  <ion-list radio-group [(ngModel)]="filhos">
+    <h2>Filhos?</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+
+  <ion-item class="item">
+    <ion-label stacked>Quantos?</ion-label>
+    <ion-input type="text" [(ngModel)]="filhosQuantos"></ion-input>
+  </ion-item><br>
+
+  <button ion-button block color="amarelo1" class="botao" (click)="continuar()">Continuar</button>
+
+</ion-content>

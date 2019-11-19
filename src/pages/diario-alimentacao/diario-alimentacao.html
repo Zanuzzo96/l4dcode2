@@ -1,0 +1,19 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Diário da vida saudável</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h2 text-center style="color:#4e4940">Em relação a sua alimentação, conseguiu realizar ao menos 4 refeições?</h2>
+  <ion-list radio-group [(ngModel)]="alimentacao">
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="Sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="Nao"></ion-radio></ion-item>
+  </ion-list>
+  <button ion-button block color="amarelo1" (click)="proximo()">Proximo</button>
+</ion-content>

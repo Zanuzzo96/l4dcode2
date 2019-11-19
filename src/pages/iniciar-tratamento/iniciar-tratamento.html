@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Iniciar tratamento</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item class="item">
+      <ion-label stacked text-center>Tratamento</ion-label>
+      <ion-input type="text" [(ngModel)]="tratamento" text-center></ion-input>
+    </ion-item>
+
+    <ion-item class="item">
+      <ion-label stacked text-center>Peso desejado em Kg</ion-label>
+      <ion-input type="number" [(ngModel)]="meta" text-center></ion-input>
+    </ion-item>
+
+    <ion-item class="item">
+      <ion-label stacked text-center>Numero de sessões</ion-label>
+      <ion-input type="number" [(ngModel)]="sessoes" text-center></ion-input>
+    </ion-item>
+
+    <ion-item class="item">
+      <ion-label stacked text-center>Peso atual</ion-label>
+      <ion-input type="number" [(ngModel)]="peso" text-center></ion-input>
+    </ion-item>
+
+    <ion-item class="item">
+    </ion-item>
+
+
+  </ion-list>
+
+  <button ion-button class="botao" (click)="iniciar()" color="amarelo1" block>Iniciar tratamento</button>
+</ion-content>

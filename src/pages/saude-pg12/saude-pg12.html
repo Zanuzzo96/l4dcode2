@@ -1,0 +1,58 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Histórico de Saúde</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-item>
+        <ion-label stacked>Observações</ion-label>
+      <ion-textarea [(ngModel)]="orientacao" rows="7" class="orientacao"></ion-textarea><br>
+    </ion-item><br>
+
+
+    <h2>Em caso de emergência avisar</h2>
+
+
+    <ion-item>
+      <ion-label stacked>Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="nome"></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+      <ion-label stacked>Telefone</ion-label>
+      <ion-input type="text" [(ngModel)]="telefone"></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+      <ion-label stacked>Médico</ion-label>
+      <ion-input type="text" [(ngModel)]="medico"></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+      <ion-label stacked>Telefone</ion-label>
+      <ion-input type="number" [(ngModel)]="telefoneMedico"></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+      <ion-label stacked>Convênio Médico</ion-label>
+      <ion-input type="text" [(ngModel)]="convenio"></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+      <ion-label stacked>Cart</ion-label>
+      <ion-input type="text" [(ngModel)]="cart"></ion-input>
+    </ion-item><br>
+
+    <ion-item>
+      <ion-label stacked>Hospital</ion-label>
+      <ion-input type="text" [(ngModel)]="hospital"></ion-input>
+    </ion-item><br>
+
+  <button ion-button block color="amarelo1" class="botao" (click)="continuar()">Continuar</button>
+</ion-content>

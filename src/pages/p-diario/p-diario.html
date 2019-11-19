@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Diario da vida saudavel</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let item of diario">
+    <ion-card-header text-center style="color:#ffffff;font-weight:bold;font-size:16px">
+      {{item.nome}}
+    </ion-card-header>
+    <ion-card-content>
+            <br>
+            <h3><strong>Dia do diario:</strong> {{item.data | date: 'dd/MM/yyyy'}}</h3>
+            <h3><strong>Sentimento do dia:</strong> {{item.dia}}</h3>
+            <h3><strong>Qualidade do sono:</strong> {{item.sono}}</h3>
+            <h3><strong>Hidratação:</strong> {{item.agua}}</h3>
+            <h3><strong>Consumo de refrigerante e doces:</strong> {{item.refriedoce}}</h3>
+            <h3><strong>Se alimentou 4 vezes no dia:</strong> {{item.refeicoes}}</h3>
+            <h3><strong>Nivel de nutrição:</strong> {{item.nutricao}}</h3>
+            <h3><strong>Atividade do dia:</strong> {{item.atividade}}</h3>
+            <h3><strong>Fumante:</strong> {{item.fumante}}</h3>
+    </ion-card-content>
+
+    <ion-row>
+      <ion-col>
+        <button ion-button icon-start clear small (click)="email(item.id_diario)">
+          <ion-icon name="ios-mail-outline" class="btn-diario"></ion-icon>
+          <div class="btn-diario">Enviar por email</div>
+        </button>
+      </ion-col>
+      <ion-col >
+        <button ion-button icon-start clear small (click)="apagar(item.id_diario)">
+          <ion-icon name="ios-backspace-outline" class="btn-diario"></ion-icon>
+          <div class="btn-diario">Apagar</div>
+        </button>
+      </ion-col>
+    </ion-row>
+
+  </ion-card>
+</ion-content>

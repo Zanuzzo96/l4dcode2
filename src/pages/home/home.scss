@@ -1,0 +1,49 @@
+page-home {
+
+  .fundoHome {
+    background-color: #4e4940;
+  }
+
+  .logo {
+    width:75%;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top:25%
+  }
+
+  .acoesHome {
+    width:73%;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 10%
+  }
+
+  .acoesHome button {
+    width:100%;
+    border-radius:0px;
+    margin-bottom:5%;
+    font-size:1.2em;
+  }
+
+  .acoesHome .btn_registrar {
+    color:#fff
+  }
+
+
+  ion-footer {
+    border: 0px;
+    border-color: transparent;
+    border-top: transparent;
+    border-bottom: transparent;
+    background-image: none !important;
+    text-align: center;
+    color: #fff;
+  }
+
+  ion-footer span {
+    border:0;
+  }
+
+}

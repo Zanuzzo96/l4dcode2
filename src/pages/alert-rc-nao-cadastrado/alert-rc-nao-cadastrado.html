@@ -1,0 +1,9 @@
+<ion-content class="background" text-center>
+  <ion-icon name="md-close-circle" class="icone"></ion-icon>
+  <h2>RC NÃO ENCONTRADO</h2>
+  <h6>Verificamos que você não é habilitado no método, gostaria de receber nosso contato?</h6>
+  <ion-input type="text" text-center class="campo-insercao" [(ngModel)]="prospecto.nome" placeholder="Seu nome"></ion-input>
+  <ion-input type="number" text-center class="campo-insercao" [(ngModel)]="prospecto.contato" placeholder="Deixe seu contato com ddd"></ion-input>
+  <button ion-button color="cinza1" class="btn-enviar" (click)="enviarContato()">Enviar contato</button>
+  <button ion-button no-border no-lines outline class="btn-voltar" (click)="voltar()">voltar</button>
+</ion-content>

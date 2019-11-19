@@ -1,0 +1,36 @@
+<!--
+  Generated template for the AcEdemaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Edema</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list radio-group [(ngModel)]="edema.pressao">
+    <h2>Teste de digito-pressão</h2>
+    <ion-item><ion-label>Positivo</ion-label><ion-radio value="Positivo"></ion-radio></ion-item>
+    <ion-item><ion-label>Negativo</ion-label><ion-radio value="Negativo"></ion-radio></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <h2>Sensação de peso / cansaço em MMII</h2>
+    <ion-item><ion-input type="text" text-center [(ngModel)]="edema.mmii" ></ion-input></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <h2>Observações</h2>
+    <ion-item><ion-input type="text" text-center [(ngModel)]="edema.obs"></ion-input></ion-item>
+  </ion-list>
+
+  <button ion-button block color="amarelo1" (click)="continuar()">Continuar</button>
+
+</ion-content>

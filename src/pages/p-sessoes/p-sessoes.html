@@ -1,0 +1,91 @@
+
+<ion-header>
+
+  <ion-toolbar color="cinza1">
+    <ion-buttons start (click)="sair()">
+      <button ion-button icon-only>
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title><ion-icon name="ios-clipboard-outline"></ion-icon> Sessão</ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngIf="configuracao == 0">
+    <ion-card-header text-center>
+      Evolução do paciente
+    </ion-card-header>
+    <ion-card-content>
+      <div *ngIf='chart'>
+        <canvas #lineCanvas></canvas>
+      </div>
+      <div class="" style="display:block;">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-5>
+              <span>Meta de peso</span>
+              <h2 text-center>{{metaApi}} Kg</h2>
+            </ion-col>
+            <ion-col col-4>
+              <span>Peso inicial</span>
+              <h2 text-center>{{pesoApi}} kg</h2>
+            </ion-col>
+            <ion-col col-3>
+              <span>Sessões</span>
+              <h2 text-center>{{contsessoesApi}} / {{sessoesApi}}</h2>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+      </ion-card-content>
+  </ion-card>
+
+  <button icon-only class="btn" (click)="corporal()">
+    <ion-icon name="ios-man-outline"></ion-icon>
+    Avaliação corporal
+  </button>
+  <button icon-only class="btn" (click)="saude()">
+    <ion-icon name="ios-heart-outline"></ion-icon>
+    Histórico de saúde
+  </button>
+  <button icon-only class="btn" (click)="sedentarismo()">
+    <ion-icon name="ios-clipboard-outline"></ion-icon>
+    Avaliação de sedentarismo
+  </button>
+  <button icon-only class="btn" (click)="imagem()" *ngIf="configuracao == 0">
+    <ion-icon name="ios-image-outline"></ion-icon>
+    Imagens das sessões
+  </button>
+
+  <div class="receita" *ngIf="configuracao == 0">
+    <span text-center><br>Orientações da sessões</span>
+    <ion-textarea placeholder="Descreva aqui o que foi orientado ao cliente na sessão" [(ngModel)]="orientacao" rows="7" class="orientacao"></ion-textarea><br>
+  </div>
+
+  <div class="receita" *ngIf="configuracao == 0">
+    <span text-center>Peso atual em Kg</span>
+    <ion-input class="peso" type="number" [(ngModel)]="peso"></ion-input><br>
+  </div>
+
+  <button icon-only class="btn" (click)="tratamento()" *ngIf="configuracao == 1">
+    <ion-icon name="ios-done-all-outline"></ion-icon>
+    Iniciar tratamento
+  </button>
+<!--
+  <button icon-only class="btn" (click)="agendar()" *ngIf="configuracao == 0">
+    <ion-icon name="ios-calendar-outline"></ion-icon>
+    Agendar proxima sessão
+  </button>
+-->
+  <button icon-only class="btn" (click)="concluir()" *ngIf="configuracao == 0">
+    <ion-icon name="ios-checkbox-outline"></ion-icon>
+    Concluir sessão
+  </button>
+
+
+</ion-content>

@@ -1,0 +1,21 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Imagens das sessões</ion-title>
+  </ion-navbar>
+  <button ion-button block color="amarelo1" (click)="historico()">Histórico das imagens</button>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h3 text-center>Adicionar imagem da sessão</h3>
+
+  <input type="file" class="custom-file-input" value="" [(ngModel)]="imagem" (change)="fileChange($event)">
+  <img *ngIf="img1" [src]="img1" class="preview"/>
+  <button ion-button block color="amarelo1" (click)="uploadImg()">Adicionar imagem</button>
+
+
+</ion-content>

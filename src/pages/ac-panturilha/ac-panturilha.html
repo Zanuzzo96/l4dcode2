@@ -1,0 +1,26 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Panturilha</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <img *ngIf=" sexo == 'm' " src="../../assets/imgs/H7.png"/>
+  <img *ngIf=" sexo == 'f' " src="../../assets/imgs/M7.png"/>
+
+  <ion-list>
+    <h2>Panturilha esquerda</h2>
+    <ion-item><ion-input type="text" text-center [(ngModel)]="panturilha.panturilhaEsq"></ion-input></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <h2>Panturilha direita</h2>
+    <ion-item><ion-input type="text" text-center [(ngModel)]="panturilha.panturilhaDir"></ion-input></ion-item>
+  </ion-list>
+
+ <button ion-button block color="amarelo1" (click)="continuar()">Continuar</button>
+</ion-content>

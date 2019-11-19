@@ -1,0 +1,20 @@
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Diário da vida saudável</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2 text-center style="color:#4e4940">Quantos copos de 200ml de agua você ingeriu hoje ao longo do dia?</h2>
+  <ion-list radio-group  [(ngModel)]="agua">
+    <ion-item><ion-label>Menos de 4 copos</ion-label><ion-radio value="Menos de 4 copos"></ion-radio></ion-item>
+    <ion-item><ion-label>Entre 5 e 6 copos</ion-label><ion-radio value="Entre 5 e 6 copos"></ion-radio></ion-item>
+    <ion-item><ion-label>Entre 7 e 8 copos</ion-label><ion-radio value="Entre 7 e 8 copos"></ion-radio></ion-item>
+    <ion-item><ion-label>Entre 9 e 10 copos</ion-label><ion-radio value="Entre 9 e 10 copos"></ion-radio></ion-item>
+    <ion-item><ion-label>Acima de 10 copos</ion-label><ion-radio value="Acima de 10 copos"></ion-radio></ion-item>
+  </ion-list>
+  <button ion-button block color="amarelo1" (click)="proximo()">Proximo</button>
+</ion-content>

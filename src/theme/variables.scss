@@ -1,0 +1,52 @@
+
+$font-path: "../assets/fonts";
+$app-direction: ltr;
+
+@import "ionic.globals";
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222,
+
+  branco: #fff,
+
+  amarelo1: #f89e33,
+  cinza1: #4e4940
+);
+
+
+$loading-ios-spinner-color: #f89e33;
+$loading-md-spinner-color: #f89e33;
+$loading-md-text-color: #f89e33;
+$loading-ios-text-color: #f89e33;
+
+$segment-button-md-text-color-activated: #F89E33;
+$segment-button-md-border-bottom-color: #FFFFFF;
+$segment-button-md-border-color-activated: #F89E33;
+$segment-button-ios-border-radius: 0px;
+$segment-button-ios-background-color-activated: #F89E33;
+
+$label-md-text-color-focused: #f89e33;
+$text-input-md-highlight-color: #f89e33;
+$text-input-highlight-color-valid	: #f89e33;
+$radio-ios-color-on	: #f89e33;
+$radio-md-color-on	: #f89e33;
+
+$alert-md-button-text-align	: center;
+$alert-md-button-text-color	: #f89e33;
+$alert-ios-button-text-color	: #f89e33;
+
+$checkbox-ios-background-color-on:#f89e33;
+$checkbox-ios-icon-border-color-on:#f89e33;
+$checkbox-md-icon-background-color-on:#f89e33;
+$checkbox-md-icon-border-color-on:#f89e33;
+
+$datetime-ios-placeholder-color: #f89e33;
+
+@import "ionic.theme.default";
+@import "ionic.ionicons";
+@import "roboto";
+@import "noto-sans";

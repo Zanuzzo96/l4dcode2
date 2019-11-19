@@ -1,0 +1,13 @@
+
+<ion-header no-border>
+  <ion-navbar color="cinza1"></ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="fundo">
+  <h2>Digite seu RC</h2>
+  <h5>somente os numeros</h5>
+  <ion-input type="number" class="entrada" text-center placeholder="Ex: 2018123456" [(ngModel)]="registro"></ion-input>
+
+  <button ion-button block color="amarelo1" class="btn" (click)="validar()">Validar</button>
+</ion-content>

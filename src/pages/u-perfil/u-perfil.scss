@@ -1,0 +1,73 @@
+page-u-perfil {
+  .fundo {
+    background-color: #fff;
+  }
+
+  .img-perfil {
+    width: 220px;
+    display:block;
+    margin-left:auto;
+    margin-right: auto;
+    height: 220px;
+    margin-top:40px;
+    border-radius: 50%
+  }
+
+  .custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+    display: none;
+  }
+  .custom-file-input::before {
+    content: 'Atualizar foto';
+    display: inline-block;
+    background: #f89e33 ;
+    padding:10px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    height:20px;
+    width: 50%;
+    margin-left:22%;
+    margin-top: 5px;
+    text-align: center;
+  }
+  .custom-file-input:hover::before {
+    border-color: black;
+  }
+  .custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+
+
+  .dados {
+    padding-top:10px;
+    padding-bottom:0px;
+    padding-left:15px;
+    padding-right:30px;
+  }
+
+  .btnAtualizarCep{
+    color:#4e4940;
+  }
+
+  ion-footer{
+    background-color: #fce1c1;
+
+    .btn{
+      width: 85%;
+      height: 40px;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 15px;
+      margin-top: 15px;
+      padding:5px;
+    }
+  }
+
+
+}

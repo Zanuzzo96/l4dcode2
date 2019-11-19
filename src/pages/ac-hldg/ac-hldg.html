@@ -1,0 +1,52 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Hidrolipodistrofia Ginóide</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list radio-group [(ngModel)]="hldg.tipo">
+      <h2>Tipo</h2>
+      <ion-item><ion-label>Flácida</ion-label><ion-radio value="Flácida"></ion-radio></ion-item>
+      <ion-item><ion-label>Edematosa</ion-label><ion-radio value="Edematosa"></ion-radio></ion-item>
+      <ion-item><ion-label>Compacta</ion-label><ion-radio value="Compacta"></ion-radio></ion-item>
+      <ion-item><ion-label>Mista</ion-label><ion-radio value="Mista"></ion-radio></ion-item>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="hldg.grau">
+      <h2>Grau</h2>
+      <ion-item><ion-label>I</ion-label><ion-radio value="1"></ion-radio></ion-item>
+      <ion-item><ion-label>II</ion-label><ion-radio value="2"></ion-radio></ion-item>
+      <ion-item><ion-label>III</ion-label><ion-radio value="3"></ion-radio></ion-item>
+      <ion-item><ion-label>IV</ion-label><ion-radio value="4"></ion-radio></ion-item>
+    </ion-list>
+
+    <ion-list>
+      <h2>Localização</h2>
+      <ion-item><ion-input type="text" text-center [(ngModel)]="hldg.local"></ion-input></ion-item>
+    </ion-list>
+
+    <ion-list>
+      <h2>Coloração do tecido</h2>
+      <ion-item><ion-input type="text" text-center [(ngModel)]="hldg.coloracao"></ion-input></ion-item>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="hldg.temp">
+      <h2>Temperatura</h2>
+      <ion-item><ion-label>Fria</ion-label><ion-radio value="fria"></ion-radio></ion-item>
+      <ion-item><ion-label>Quente</ion-label><ion-radio value="quente"></ion-radio></ion-item>
+    </ion-list>
+
+    <ion-list radio-group [(ngModel)]="hldg.palpacao">
+      <h2>Presença de dor à palpação</h2>
+      <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+      <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+    </ion-list>
+
+  <button ion-button block color="amarelo1" (click)="continuar()">Continuar</button>
+</ion-content>

@@ -1,0 +1,35 @@
+<!--
+  Generated template for the AcImcPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>IMC</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <h2>Peso atual</h2>
+    <ion-item><ion-input type="number" text-center [(ngModel)]="imc.peso" placeholder="Ex: 80 - Números inteiros em Kg"></ion-input></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <h2>Altura</h2>
+    <ion-item><ion-input type="number" text-center [(ngModel)]="imc.altura" placeholder="Ex: 1.60 - Altura em metros"></ion-input></ion-item>
+  </ion-list>
+
+  <ion-list>
+    <h2>Observações</h2>
+    <ion-item><ion-input type="text" text-center [(ngModel)]="imc.obs"></ion-input></ion-item>
+  </ion-list>
+
+  <button ion-button block color="amarelo1" (click)="continuar(imc.peso,imc.altura)">Continuar</button>
+
+</ion-content>

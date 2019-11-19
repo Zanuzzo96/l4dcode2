@@ -1,0 +1,25 @@
+<!--
+  Generated template for the SeTrabalhoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Teste de sedentarismo</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2 text-center style="color:#4e4940">Durante seu trabalho, você fica:</h2>
+  <ion-list radio-group [(ngModel)]="trabalho">
+    <ion-item><ion-label>Em pé ou em deslocamento a<br> maior parte do tempo</ion-label><ion-radio value="10"></ion-radio></ion-item>
+    <ion-item><ion-label>A cada hora fico pelo menos<br> cinco minutos de pé</ion-label><ion-radio value="7.5"></ion-radio></ion-item>
+    <ion-item><ion-label>Sentado mais da metade do tempo</ion-label><ion-radio value="5"></ion-radio></ion-item>
+    <ion-item><ion-label>Sentado o tempo todo</ion-label><ion-radio value="2.5"></ion-radio></ion-item>
+  </ion-list>
+  <button ion-button block color="amarelo1" (click)="continuar()">Proximo</button>
+</ion-content>

@@ -1,0 +1,16 @@
+page-diario-concluido {
+  .fundo {
+    background-image: url(../../assets/imgs/diario.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+
+  .cartao {
+    margin-top: 40vh
+  }
+
+  .btn-voltar {
+    border: none !important;
+    color:#f89e33
+  }
+}

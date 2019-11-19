@@ -1,0 +1,39 @@
+page-saude-pg13 {
+
+  .fundo{
+    background-color: #f4f3f3
+  }
+
+  ion-content{
+    width: 100%
+  }
+
+  .botao{
+    width: 100%;
+    float: right;
+  }
+
+  h2 {
+    text-align: center;
+    color:  #4e4940;
+    font-size: 20px;
+    padding-bottom: 15px
+  }
+
+  h1 {
+    font-size: 2.3em;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    color:#4e4940;
+    text-align: center;
+  }
+
+  .icone{
+    font-size: 10em;
+    color: #f96161;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}

@@ -1,0 +1,58 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Histórico de Saúde</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list radio-group [(ngModel)]="cuidadosdiarios">
+    <h2>Cuidados diários e produtos em uso</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Qual?</ion-label>
+      <ion-input type="text" [(ngModel)]="cuidadosdiariosQual"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="marcapasso">
+    <h2>Portador de marcapasso</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Qual?</ion-label>
+      <ion-input type="text" [(ngModel)]="marcapassoQual"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="metais">
+    <h2>Presença de metais</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Local?</ion-label>
+      <ion-input type="text" [(ngModel)]="metaislocal"></ion-input>
+    </ion-item><br>
+
+  <ion-list radio-group [(ngModel)]="cancer">
+    <h2>Antecedentes oncológicos (câncer)</h2>
+    <ion-item><ion-label>Sim</ion-label><ion-radio value="sim"></ion-radio></ion-item>
+    <ion-item><ion-label>Não</ion-label><ion-radio value="não"></ion-radio></ion-item>
+  </ion-list>
+
+    <ion-item>
+      <ion-label stacked>Qual?</ion-label>
+      <ion-input type="text" [(ngModel)]="cancerQual"></ion-input>
+    </ion-item><br>
+
+  <button ion-button block color="amarelo1" class="botao" (click)="continuar()">Continuar</button>
+
+</ion-content>

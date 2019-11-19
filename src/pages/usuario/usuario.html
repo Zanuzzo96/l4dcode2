@@ -1,0 +1,37 @@
+<ion-content>
+  <div class="box1">
+    <img src="../../assets/imgs/logo_branco.png" alt="">
+  </div>
+  <div padding >
+
+    <button icon-only class="btn" (click)="metodo()">
+      <ion-icon name="ios-cafe-outline"></ion-icon>
+      Conheça mais sobre o método
+    </button>
+
+    <button icon-only class="btn" (click)="localizar()">
+      <ion-icon name="ios-pin-outline"></ion-icon>
+      Localizar profissional habilitado
+    </button>
+
+    <button icon-only class="btn" (click)="sedentarismo()">
+      <ion-icon name="ios-clipboard-outline" start></ion-icon>
+      Faça nosso teste de sedentarismo
+    </button>
+
+    <button icon-only class="btn" (click)="dicas()">
+      <ion-icon name="ios-heart-outline"></ion-icon>
+      Temos algumas dicas pra você
+    </button>
+
+    <button icon-only class="btn" (click)="perfil()">
+      <ion-icon name="ios-person-outline"></ion-icon>
+      Atualizar perfil
+    </button>
+  </div>
+
+  <button ion-button full icon-only no-border no-lines outline class="btn-deslogar" (click)="sair()">
+    <ion-icon name="ios-log-out-outline"></ion-icon>
+    Sair
+  </button>
+</ion-content>

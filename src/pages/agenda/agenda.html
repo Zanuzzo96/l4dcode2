@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Agendar próxima sessão</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+
+      <ion-item class="item">
+        <ion-label stacked text-center>Selecione um dia</ion-label>
+       <ion-datetime displayFormat="DD/MM/YYYY" min="2016" max="2025-12-31" cancelText=Cancelar doneText=Ok [(ngModel)]="data" text-center></ion-datetime>
+      </ion-item>
+
+      <h6 text-center (click)="verAgenda(data)">Ver agenda do dia</h6>
+
+
+        <ion-grid *ngIf="dia != ''">
+          <ion-row class="agendamentos" *ngFor="let item of dia">
+            <ion-col col-3 text-center>
+              <h6>{{item.hora}}</h6>
+            </ion-col>
+            <ion-col col-9>
+              <h6>{{item.nome}}</h6>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+        <ion-grid *ngIf="dia == ''">
+          <ion-row class="danger">
+            <ion-col col-12 text-center>
+              <h6>Você não tem nenhuma sessão agendada para essa data</h6>
+            </ion-col>
+
+          </ion-row>
+        </ion-grid>
+
+      <ion-item class="item">
+        <ion-label stacked text-center>Hora inicio</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="hora" cancelText=Cancelar doneText=Ok required text-center></ion-datetime>
+      </ion-item>
+
+      <button ion-button block color="amarelo1" class="botaoAgendar" (click)="agendar(data,hora)">Agendar</button>
+
+  </ion-list>
+</ion-content>

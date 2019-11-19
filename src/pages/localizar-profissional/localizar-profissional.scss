@@ -1,0 +1,128 @@
+page-localizar-profissional {
+  .endereco{
+
+    margin-bottom: 15px;
+
+    h4{
+      font-size: 18px;
+      color: #4e4950;
+    }
+
+    .atual {
+
+      background-color: #f89e33;
+      border-radius: 15px;
+      padding-top: 7px;
+
+      ion-icon{
+        font-size: 4em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -8px;
+        color:#fff
+      }
+
+      h6{
+        font-size:16px;
+        color:#fff;
+        padding-top: 1px
+      }
+    }
+
+
+
+  }
+
+  .erro{
+    background-color: #d74f41;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 15px;
+    padding-top: 7px;
+
+    ion-icon{
+      font-size: 4em;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: -8px;
+      color:#fff
+    }
+
+    h6{
+      font-size:16px;
+      color:#fff
+    }
+  }
+
+  .profissionais{
+    h4{
+      font-size: 18px;
+      margin-top: 10px
+    }
+
+    .profissional{
+      background-color: #f4f4f4;
+      border-radius: 15px;
+      padding-top: 10px;
+      padding-left: 10px;
+      margin-bottom: 10px;
+      color:#4e4950;
+
+      ion-icon{
+        font-size: 2.5em;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 15px
+      }
+
+      h6{
+        font-size: 14px
+      }
+
+    }
+  }
+
+  .busca{
+    background-color: #f89e33;
+
+    .campoBusca{
+      border-bottom: 1px solid #fff;
+      color: #fff
+    }
+    .campoBusca ::placeholder{
+      color:#fff;
+    }
+  }
+
+  .retorno{
+    background-color:#f4f4f4;
+    border-radius: 15px;
+    padding-top: 10px;
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+    h4{
+      font-size: 18px;
+      margin-top: 10px;
+      color: #4e4940;
+    }
+
+    ion-icon{
+      font-size: 2.5em;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 15px;
+      color: #4e4940;
+    }
+
+    h6{
+      font-size: 14px;
+      color: #4e4940;
+    }
+  }
+
+}

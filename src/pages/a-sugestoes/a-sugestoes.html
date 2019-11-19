@@ -1,0 +1,23 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Sugestões e Informações</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <button ion-button block color="amarelo1" (click)="historicodesugestoes()">Histórico de sugestão ou informação</button>
+
+  <h3 text-center>Adicionar uma sugestão ou informação</h3>
+
+  <input type="file" class="custom-file-input" value="" (change)="fileChange($event)">
+  <img *ngIf="img1" [src]="img1" class="preview"/>
+  <br>
+  <ion-input type="text" [(ngModel)]="titulo" placeholder="Titulo da sugestão ou informação"></ion-input>
+  <ion-textarea placeholder="Escreva a sugestão ou informação" rows="5" [(ngModel)]="mensagem"></ion-textarea><br>
+  <button ion-button block color="amarelo1" (click)="uploadImg()">Adicionar sugestão ou informação</button>
+
+
+</ion-content>

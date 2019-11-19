@@ -1,0 +1,42 @@
+<!--
+  Generated template for the PerfilProfissionalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Profissional habilitado</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="fundo">
+
+  <div class="dados">
+    <h3 text-center>{{estabelecimento}}</h3>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-3><ion-icon text-center name="ios-pin-outline" start></ion-icon></ion-col>
+        <ion-col col-9><h4>{{endereco}} - {{cidade}} - {{estado}}</h4></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-3><ion-icon text-center name="ios-call-outline" start></ion-icon></ion-col>
+        <ion-col col-9><h4>{{telefone}}</h4></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <button ion-button color="amarelo1" class="btn" (click)="mensagem()">
+      Enviar mensagem
+    </button>
+
+    <button  ion-button color="amarelo1"  class="btn" (click)="adicionar()">
+      Selecionar profissional<br>para tratamentos
+    </button>
+
+  </div>
+
+</ion-content>

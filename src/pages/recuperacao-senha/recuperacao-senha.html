@@ -1,0 +1,25 @@
+
+<ion-header>
+
+  <ion-navbar color="cinza1">
+    <ion-title>Recuperar senha</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-item class="item">
+      <ion-label stacked>CPF</ion-label>
+      <ion-input type="number" [(ngModel)]="cpf" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Data de nascimento</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="nasc" required></ion-datetime >
+    </ion-item>
+
+    <button ion-button block color="amarelo1" class="btn" (click)="recuperar()">Recuperar senha</button>
+  </ion-list>
+</ion-content>
